@@ -13,7 +13,7 @@ action :create do
       group username
     end
 
-    execute "generate ssh keys for #{username}" do
+    execute "generate-ssh-key-for-#{username}" do
       user username
       creates pubkey
       command "ssh-keygen -t rsa -q -f #{seckey} -P \"\""
